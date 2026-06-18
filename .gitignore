@@ -1,0 +1,39 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+workspace.code-workspace
+
+# Go build artifacts and binaries
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Project-specific compiled binaries
+authentication-service/authApp
+broker-service/brokerApp
+
+# Coverage and profiling
+coverage.out
+*.coverprofile
+*.pprof
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Docker/local data volumes
+project/db-data/
+
+# Optional vendored deps
+**/vendor/
