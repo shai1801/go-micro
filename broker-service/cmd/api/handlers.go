@@ -14,7 +14,7 @@ type RequestPayload struct {
 
 type AuthPayload struct {
 	Email    string `json:"email"`
-	Password string `json:"Password"`
+	Password string `json:"password"`
 }
 
 func (app *Config) Broker(w http.ResponseWriter, r *http.Request) {
@@ -102,6 +102,6 @@ func (app *Config) authenticate(w http.ResponseWriter, a AuthPayload) {
 	payload.Error = false
 	payload.Message = "authenticated"
 	payload.Data = jsonFromService.Data
-	app.writeJSON(w, http.StatusAccepted, payload.Data)
+	app.writeJSON(w, http.StatusAccepted, payload)
 
 }
